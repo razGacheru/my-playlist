@@ -23,9 +23,9 @@ function App() {
 
   return (
     <div className="app">
-      <ListHeader listName={"Holiday tick list"} />
+      <ListHeader listName={"Holiday tick list"} getData={getData} />
       {sortedPlaylist?.map((song) => (
-        <ListItem key={song.id} song={song} />
+        <ListItem key={song.id} song={song} getData={getData} />
       ))}
     </div>
   );
